@@ -1,0 +1,24 @@
+{
+  "pages": {
+    "/dashboard/invoices/create/page": [
+      "static/chunks/[root of the server]__556b93e4._.css",
+      "static/chunks/node_modules_next_dist_1a6ee436._.js",
+      "static/chunks/app_layout_tsx_aaf7d535._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_5a1ff161._.js",
+      "static/chunks/_4a8d42c2._.js",
+      "static/chunks/app_dashboard_layout_tsx_94518736._.js",
+      "static/chunks/app_dashboard_invoices_error_tsx_7e72c89d._.js",
+      "static/chunks/app_dashboard_invoices_error_tsx_4df2adeb._.js",
+      "static/chunks/_8a805571._.js",
+      "static/chunks/app_dashboard_invoices_create_page_tsx_4df2adeb._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_fff34f97._.js",
+      "static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc06._.js",
+      "static/chunks/node_modules_next_dist_compiled_38d265cf._.js",
+      "static/chunks/node_modules_next_dist_client_c24f7707._.js",
+      "static/chunks/node_modules_next_dist_3bfaed20._.js",
+      "static/chunks/node_modules_@swc_helpers_cjs_00636ac3._.js",
+      "static/chunks/_e69f0d32._.js",
+      "static/chunks/_a2b209e9._.js"
+    ]
+  }
+}

@@ -1,5 +1,11 @@
 'use client';
 
+// What .bind(null, invoice.id) does:
+// Pre-fills invoice.id as the first argument of updateInvoice.
+// Ensures id is serialized and sent securely by Next.js.
+// Encodes id properly, preventing any security issues like SQL injection.
+// Allows formData to be automatically passed as the second argument.
+
 import { CustomerField, InvoiceForm } from '@/app/lib/definitions';
 import {
   CheckIcon,
@@ -9,6 +15,7 @@ import {
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { Button } from '@/app/ui/button';
+import { updateInvoice } from '@/app/lib/actions';
 
 export default function EditInvoiceForm({
   invoice,
@@ -17,8 +24,9 @@ export default function EditInvoiceForm({
   invoice: InvoiceForm;
   customers: CustomerField[];
 }) {
+  const updateInvoiceWithId =  updateInvoice.bind(null, invoice.id)
   return (
-    <form>
+    <form action={updateInvoiceWithId}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
         {/* Customer Name */}
         <div className="mb-4">
