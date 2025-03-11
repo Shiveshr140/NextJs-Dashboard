@@ -157,8 +157,8 @@ async function fetchCardData() {
             customerCountPromise,
             invoiceStatusPromise
         ]);
-        const numberOfInvoices = Number(data[0][0].count ?? '0');
-        const numberOfCustomers = Number(data[1][0].count ?? '0');
+        const numberOfInvoices = Number(data[0].count ?? '0');
+        const numberOfCustomers = Number(data[1].count ?? '0');
         const totalPaidInvoices = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["formatCurrency"])(data[2][0].paid ?? '0');
         const totalPendingInvoices = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["formatCurrency"])(data[2][0].pending ?? '0');
         return {

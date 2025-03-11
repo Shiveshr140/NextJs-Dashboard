@@ -157,8 +157,8 @@ async function fetchCardData() {
             customerCountPromise,
             invoiceStatusPromise
         ]);
-        const numberOfInvoices = Number(data[0][0].count ?? '0');
-        const numberOfCustomers = Number(data[1][0].count ?? '0');
+        const numberOfInvoices = Number(data[0].count ?? '0');
+        const numberOfCustomers = Number(data[1].count ?? '0');
         const totalPaidInvoices = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["formatCurrency"])(data[2][0].paid ?? '0');
         const totalPendingInvoices = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$utils$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["formatCurrency"])(data[2][0].pending ?? '0');
         return {
@@ -567,6 +567,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$
 ;
 async function LatestInvoices() {
     const latestInvoices = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$data$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["fetchLatestInvoices"])();
+    console.log("latestInvoices", latestInvoices);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$1$2e$6_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0_$5f$react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex w-full flex-col md:col-span-4",
         children: [
@@ -575,7 +576,7 @@ async function LatestInvoices() {
                 children: "Latest Invoices"
             }, void 0, false, {
                 fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-                lineNumber: 12,
+                lineNumber: 13,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$1$2e$6_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0_$5f$react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -600,7 +601,7 @@ async function LatestInvoices() {
                                                 height: 32
                                             }, void 0, false, {
                                                 fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-                                                lineNumber: 31,
+                                                lineNumber: 32,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$1$2e$6_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0_$5f$react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -611,7 +612,7 @@ async function LatestInvoices() {
                                                         children: invoice.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-                                                        lineNumber: 39,
+                                                        lineNumber: 40,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$1$2e$6_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0_$5f$react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -619,19 +620,19 @@ async function LatestInvoices() {
                                                         children: invoice.email
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-                                                        lineNumber: 42,
+                                                        lineNumber: 43,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-                                                lineNumber: 38,
+                                                lineNumber: 39,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-                                        lineNumber: 30,
+                                        lineNumber: 31,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$1$2e$6_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0_$5f$react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -639,19 +640,19 @@ async function LatestInvoices() {
                                         children: invoice.amount
                                     }, void 0, false, {
                                         fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-                                        lineNumber: 47,
+                                        lineNumber: 48,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, invoice.id, true, {
                                 fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-                                lineNumber: 21,
+                                lineNumber: 22,
                                 columnNumber: 15
                             }, this);
                         })
                     }, void 0, false, {
                         fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-                        lineNumber: 18,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$1$2e$6_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0_$5f$react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -661,7 +662,7 @@ async function LatestInvoices() {
                                 className: "h-5 w-5 text-gray-500"
                             }, void 0, false, {
                                 fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-                                lineNumber: 57,
+                                lineNumber: 58,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$1$2e$6_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0_$5f$react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -669,25 +670,25 @@ async function LatestInvoices() {
                                 children: "Updated just now"
                             }, void 0, false, {
                                 fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-                                lineNumber: 58,
+                                lineNumber: 59,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-                        lineNumber: 56,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-                lineNumber: 15,
+                lineNumber: 16,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/ui/dashboard/latest-invoices.tsx",
-        lineNumber: 11,
+        lineNumber: 12,
         columnNumber: 5
     }, this);
 }
